@@ -9,7 +9,7 @@ export default async function aboutUs() {
         alt="Fail to load image"
       ></img>
       <div className={styles.info}>
-        <h1 className={styles.title}>Jeon, Fullstack Develper</h1>
+        <h1 className={styles.title}>Jeon, Fullstack Developer</h1>
         <h2 className={styles.skills}>Skills</h2>
         <ul>
           <li>1. ReactJS</li>
