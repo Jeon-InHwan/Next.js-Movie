@@ -1,10 +1,10 @@
-import { API_URL } from "../app/(home)/page";
 import styles from "../styles/movie-info.module.css";
 import InfoDetails from "../components/movie-info-details";
 
 export async function getMovie(id: string) {
   // console.log(`Fetching a movie: ${Date.now()}`);
   // await new Promise((resolve) => setTimeout(resolve, 3000));
+  const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
   const response = await fetch(`${API_URL}/${id}`);
   return response.json();
 }
