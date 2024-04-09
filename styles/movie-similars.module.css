@@ -1,0 +1,81 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.poster {
+  border-radius: 20px;
+  max-width: 70%;
+  place-self: center;
+}
+
+.title {
+  color: white;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.container a {
+  text-decoration: underline;
+}
+
+.actors {
+  color: white;
+  font-size: 18px;
+  padding-left: 15%;
+}
+
+.actors li {
+  padding: 2px 0px 2px 0px;
+}
+
+.titleForActors {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.similarContainer {
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  max-width: 90%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.similarContainer img {
+  max-width: 100%;
+  min-height: 100%;
+  border-radius: 10px;
+  transition: sacle opacity 10s ease-in-out;
+}
+
+.similarContainer img {
+  opacity: 0.8;
+}
+
+.similarContainer img:hover {
+  opacity: 1;
+  scale: 1.02;
+}
+
+.similarContainer img:hover ~ a {
+  font-size: 1.02em;
+}
+
+.similarContainer a {
+  text-align: center;
+}

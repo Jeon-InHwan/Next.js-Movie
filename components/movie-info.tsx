@@ -1,5 +1,6 @@
 import { API_URL } from "../app/(home)/page";
 import styles from "../styles/movie-info.module.css";
+import InfoDetails from "../components/movie-info-details";
 
 export async function getMovie(id: string) {
   // console.log(`Fetching a movie: ${Date.now()}`);
@@ -22,8 +23,9 @@ export default async function MovieInfo({ id }: { id: string }) {
         <h3>⭐{movie.vote_average.toFixed(2)}</h3>
         <p>{movie.overview}</p>
         <a href={movie.homepage} target={"_blank"}>
-          Homepage &rarr;
+          Official Homepage
         </a>
+        <InfoDetails id={id} page="infoPage" />
       </div>
     </div>
   );
