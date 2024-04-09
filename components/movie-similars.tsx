@@ -1,3 +1,4 @@
+import { API_URL } from "../constants";
 import styles from "../styles/movie-similars.module.css";
 import Movie from "./movie";
 import InfoDetails from "./movie-info-details";
@@ -5,13 +6,12 @@ import InfoDetails from "./movie-info-details";
 export async function getMovie(id: string) {
   // console.log(`Fetching a movie: ${Date.now()}`);
   // await new Promise((resolve) => setTimeout(resolve, 3000));
-  const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
+
   const response = await fetch(`${API_URL}/${id}`);
   return response.json();
 }
 
 export async function getSimilars(id: string) {
-  const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
   const response = await fetch(`${API_URL}/${id}/similar`);
   return response.json();
 }
